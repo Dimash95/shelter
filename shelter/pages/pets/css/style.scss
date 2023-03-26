@@ -27,7 +27,6 @@ $color-light-s: #FAFAFA;
 $color-light-l: #F6F6F6;
 $color-light-xl: #FFFFFF;
 
-
 html {
    scroll-behavior: smooth;
    box-sizing: border-box;
@@ -53,40 +52,39 @@ a {
 
 /*header*/
 
-.container {
-   background-image: url(../../../assets/images/start-screen-gradient-background.png);
-   background-position: center;
-   background-size: cover;
-}
-
 .header__wrapper {
    margin: 0 auto;
    display: flex;
    justify-content: space-between;
    border: none;
-   padding-bottom: 72px;
+   padding-top: 0px;
+   padding-bottom: 16px;
 
    .header__logo {
       text-align: center;
 
       h2 {
-         font-family: Georgia, sans-serif;
-         color: $color-primary;
-         font-size: 2rem;
-         margin-bottom: 0;
-         letter-spacing: 0.06em;
+         margin-bottom: 10px;
+
+         a {
+            font-family: Georgia, sans-serif;
+            color: $color-dark-l;
+            font-size: 2rem;
+            margin-top: 20px;
+
+            letter-spacing: 0.06em;
+         }
       }
 
       p {
          font-family: Arial, sans-serif;
-         color: $color-light-xl;
+         color: $color-dark-3xl;
          font-size: 13px;
          letter-spacing: 0.1em;
          align-items: center;
 
       }
    }
-
 }
 
 .header__nav {
@@ -98,6 +96,8 @@ a {
       justify-content: space-between;
       gap: 35px;
       padding: 0;
+      margin-top: 6px;
+      transition: .5s ease-in-out;
 
       .nav__item {
          list-style-type: none;
@@ -107,9 +107,10 @@ a {
 
          a {
             text-decoration: none;
-            color: $color-dark-s;
+            color: $color-dark-l;
             padding-bottom: 3px;
             transition: .4s ease-in-out;
+
 
             &:active {
                border-bottom: 2px solid $color-primary;
@@ -117,11 +118,11 @@ a {
             }
 
             &:hover {
-               color: $color-light-s;
+               color: $color-dark-3xl;
             }
          }
 
-         .nav__item__about {
+         .nav__item__our-pets {
             border-bottom: 2px solid $color-primary;
          }
 
@@ -131,137 +132,11 @@ a {
 
 /*header*/
 
-/*not-only*/
+/*our-friends*/
 
-
-
-.not-only__wrapper {
-   display: flex;
-   justify-content: space-between;
-   margin-bottom: 70px;
-
-   .not-only__text {
-      padding-top: 140px;
-
-      h1 {
-         font-family: Georgia, sans-serif;
-         font-size: 44px;
-         line-height: 130%;
-         max-width: 310px;
-         margin-bottom: 36px;
-         color: $color-light-xl;
-      }
-
-      p {
-         font-family: Arial, sans-serif;
-         font-size: 15px;
-         max-width: 460px;
-         line-height: 160%;
-         color: $color-dark-s;
-         margin-bottom: 42px;
-      }
-
-      button {
-         cursor: pointer;
-         background: $color-primary;
-         border-radius: 100px;
-         border: none;
-         padding: 15px 45px;
-         font-family: Georgia, sans-serif;
-         font-size: 17px;
-         line-height: 130%;
-         letter-spacing: 0.06em;
-         color: $color-dark-xl;
-         transition: .4s ease-in-out;
-
-         &:hover {
-            background: $color-primary-light;
-         }
-      }
-   }
-}
-
-/*not-only*/
-
-/*about*/
-
-.about__wrapper {
-   display: flex;
-   max-width: 850px;
-   margin: 0 auto;
-   gap: 120px;
-   margin-bottom: 96px;
-
-   .about__img {
-      padding-top: 10px;
-   }
-
-   h2 {
-      font-family: Georgia, sans-serif;
-      color: $color-dark-l;
-      font-size: 35px;
-      letter-spacing: 0.06em;
-      max-width: 370px;
-      margin-bottom: 25px;
-   }
-
-   p {
-      font-family: Arial, sans-serif;
-      font-size: 15px;
-      line-height: 160%;
-      color: $color-dark-xl;
-   }
-
-   .about__text__currently {
-      margin-bottom: 25px;
-   }
-}
-
-/*about*/
-
-/*out-friends*/
 
 .our-friends {
    background: $color-light-l;
-}
-
-.our-friends__container {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   gap: 52px;
-   align-items: center;
-
-   .our-friends_icon-arrow {
-      cursor: pointer;
-      display: inline-flex;
-      border: 2px solid $color-primary;
-      border-radius: 50%;
-      padding: 18px;
-      height: 53px;
-      width: 53px;
-      text-align: start;
-      align-items: center;
-      transition: .4s ease-in-out;
-
-      &:hover {
-         background: $color-primary-light;
-         border-color: $color-primary-light;
-      }
-   }
-
-   .arrow-left {
-      position: absolute;
-      top: 194px;
-      left: 0;
-   }
-
-   .arrow-right {
-      position: absolute;
-      top: 194px;
-      right: 0;
-   }
-
 }
 
 
@@ -270,7 +145,7 @@ a {
    padding-top: 78px;
    padding-bottom: 100px;
 
-   h2 {
+   h1 {
       margin: 0 auto;
       font-family: Georgia, sans-serif;
       font-size: 35px;
@@ -300,11 +175,13 @@ a {
    }
 }
 
-.our-friends__pets {
+.our-friends__wrapper__cards {
    display: flex;
    justify-content: center;
-   gap: 90px;
-   margin-bottom: 66px;
+   flex-wrap: wrap;
+   row-gap: 30px;
+   column-gap: 40px;
+   margin-bottom: 60px;
 
 
    div {
@@ -349,119 +226,54 @@ a {
    }
 }
 
-/*out-friends*/
-
-/*help*/
-
-.help__wrapper {
-   text-align: center;
-   padding-top: 50px;
-   padding-bottom: 85px;
-
-   h2 {
-      font-family: Georgia, sans-serif;
-      color: $color-dark-l;
-      font-size: 35px;
-      letter-spacing: 0.06em;
-      line-height: 130%;
-      margin-bottom: 60px;
-   }
-
-   .help__wrapper__icon {
-      display: flex;
-      justify-content: center;
-      gap: 120px;
-
-      p {
-         font-family: Georgia, sans-serif;
-         font-size: 20px;
-         line-height: 115%;
-         letter-spacing: 0.06em;
-         color: $color-dark-l;
-         margin-top: 25px;
-      }
-   }
-
-   .icon-top {
-      margin-bottom: 35px;
-   }
-}
-
-/*help*/
-
-/*in-adition*/
-
-.in-addition {
-   background: $color-light-l;
-}
-
-.in-addition__wrapper {
-   padding-top: 45px;
-   padding-bottom: 90px;
+.our-friends__wrapper__number {
    display: flex;
    justify-content: center;
-   gap: 30px;
+   gap: 20px;
+   text-align: center;
+   align-items: center;
 
-   .in-addition__wrapper__img {
-      padding-top: 40px;
-   }
-}
+   // max-width: 261px;
+   button {
+      cursor: pointer;
+      background: none;
+      border: 2px solid $color-primary;
+      border-radius: 50%;
+      padding: 10px;
+      height: 53px;
+      width: 53px;
+      text-align: center;
+      align-items: center;
+      transition: .4s ease-in-out;
 
-.in-addition__wrapper__text {
-   max-width: 380px;
+      &:first-child,
+      &:nth-child(2) {
+         color: $color-dark-s;
+         border-color: $color-dark-s;
 
-   h2 {
-      font-family: Georgia, sans-serif;
-      color: $color-dark-l;
-      font-size: 35px;
-      letter-spacing: 0.06em;
-      line-height: 130%;
-      margin-bottom: 20px;
-   }
-
-   .in-addition__wrapper__text__bank {
-      font-family: Georgia, sans-serif;
-      font-size: 15px;
-      line-height: 110%;
-      letter-spacing: 0.06em;
-      color: $color-dark-l;
-      margin-bottom: 20px;
-   }
-
-
-
-   .in-addition__wrapper__button {
-      display: flex;
-      gap: 14px;
-      max-width: 349px;
-      background: $color-primary;
-      border-radius: 9px;
-      padding: 10px 15px;
-      margin-bottom: 20px;
-
-      .in-addition__wrapper__text__card {
-         display: inline;
-         font-family: Georgia, sans-serif;
-         font-size: 20px;
-         line-height: 115%;
-         letter-spacing: 0.06em;
-         color: $color-dark-l;
-         margin: 0 auto;
+         &:hover {
+            background: none;
+         }
       }
 
+      &:nth-child(3) {
+         background: $color-primary;
+         border: none;
 
-   }
+         &:hover {
+            background: $color-primary-light;
+         }
+      }
 
-   .info {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      line-height: 18px;
-      color: $color-dark-m;
+      &:nth-child(4):hover,
+      &:last-child:hover {
+         border: none;
+      }
    }
 }
 
+/*our-friends*/
 
-/*in-adition*/
 
 /*footer*/
 
@@ -540,6 +352,8 @@ footer {
          letter-spacing: 0.06em;
          color: $color-primary
       }
+
+
    }
 }
 
