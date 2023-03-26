@@ -1,0 +1,552 @@
+@font-face {
+   font-family: 'Arial';
+   src: url('/shelter/assets/fonts/ArialMT.woff2') format('woff2'),
+      url('/shelter/assets/fonts/ArialMT.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Georgia';
+   src: url('/shelter/assets/fonts/Georgia.woff2') format('woff2'),
+      url('/shelter/assets/fonts/Georgia.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
+$color-primary: #F1CDB3;
+$color-primary-light: #FDDCC4;
+$color-dark-s: #CDCDCD;
+$color-dark-m: #B2B2B2;
+$color-dark-l: #545454;
+$color-dark-xl: #4C4C4C;
+$color-dark-3xl: #292929;
+$color-light-s: #FAFAFA;
+$color-light-l: #F6F6F6;
+$color-light-xl: #FFFFFF;
+
+
+html {
+   scroll-behavior: smooth;
+   box-sizing: border-box;
+   margin: 0 auto;
+   font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+body{
+   margin: 0 auto;
+}
+
+.wrapper {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+a {
+   text-decoration: none;
+}
+
+/*header*/
+
+.container {
+   background-image: url(../../../assets/images/start-screen-gradient-background.png);
+   background-position: center;
+   background-size: cover;
+}
+
+.header__wrapper {
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   border: none;
+   padding-bottom: 72px;
+
+   .header__logo {
+      text-align: center;
+
+      h2 {
+         font-family: Georgia, sans-serif;
+         color: $color-primary;
+         font-size: 2rem;
+         margin-bottom: 0;
+         letter-spacing: 0.06em;
+      }
+
+      p {
+         font-family: Arial, sans-serif;
+         color: $color-light-xl;
+         font-size: 13px;
+         letter-spacing: 0.1em;
+         align-items: center;
+
+      }
+   }
+
+}
+
+.header__nav {
+   font-family: Arial, sans-serif;
+   max-width: 443px;
+
+   .nav__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      padding: 0;
+
+      .nav__item {
+         list-style-type: none;
+         font-family: Arial, sans-serif;
+         font-size: 15px;
+         padding-top: 36px;
+
+         a {
+            text-decoration: none;
+            color: $color-dark-s;
+            padding-bottom: 3px;
+            transition: .4s ease-in-out;
+
+            &:active {
+               border-bottom: 2px solid $color-primary;
+               color: $color-light-s;
+            }
+
+            &:hover {
+               color: $color-light-s;
+            }
+         }
+
+         .nav__item__about {
+            border-bottom: 2px solid $color-primary;
+         }
+
+      }
+   }
+}
+
+/*header*/
+
+/*not-only*/
+
+
+
+.not-only__wrapper {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 70px;
+
+   .not-only__text {
+      padding-top: 140px;
+
+      h1 {
+         font-family: Georgia, sans-serif;
+         font-size: 44px;
+         line-height: 130%;
+         max-width: 310px;
+         margin-bottom: 36px;
+         color: $color-light-xl;
+      }
+
+      p {
+         font-family: Arial, sans-serif;
+         font-size: 15px;
+         max-width: 460px;
+         line-height: 160%;
+         color: $color-dark-s;
+         margin-bottom: 42px;
+      }
+
+      button {
+         cursor: pointer;
+         background: $color-primary;
+         border-radius: 100px;
+         border: none;
+         padding: 15px 45px;
+         font-family: Georgia, sans-serif;
+         font-size: 17px;
+         line-height: 130%;
+         letter-spacing: 0.06em;
+         color: $color-dark-xl;
+         transition: .4s ease-in-out;
+
+         &:hover {
+            background: $color-primary-light;
+         }
+      }
+   }
+}
+
+/*not-only*/
+
+/*about*/
+
+.about__wrapper {
+   display: flex;
+   max-width: 850px;
+   margin: 0 auto;
+   gap: 120px;
+   margin-bottom: 96px;
+
+   .about__img {
+      padding-top: 10px;
+   }
+
+   h2 {
+      font-family: Georgia, sans-serif;
+      color: $color-dark-l;
+      font-size: 35px;
+      letter-spacing: 0.06em;
+      max-width: 370px;
+      margin-bottom: 25px;
+   }
+
+   p {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 160%;
+      color: $color-dark-xl;
+   }
+
+   .about__text__currently {
+      margin-bottom: 25px;
+   }
+}
+
+/*about*/
+
+/*out-friends*/
+
+.our-friends {
+   background: $color-light-l;
+}
+
+.our-friends__container {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   gap: 52px;
+   align-items: center;
+
+   .our-friends_icon-arrow {
+      cursor: pointer;
+      display: inline-flex;
+      border: 2px solid $color-primary;
+      border-radius: 50%;
+      padding: 18px;
+      height: 53px;
+      width: 53px;
+      text-align: start;
+      align-items: center;
+      transition: .4s ease-in-out;
+
+      &:hover {
+         background: $color-primary-light;
+         border-color: $color-primary-light;
+      }
+   }
+
+   .arrow-left {
+      position: absolute;
+      top: 194px;
+      left: 0;
+   }
+
+   .arrow-right {
+      position: absolute;
+      top: 194px;
+      right: 0;
+   }
+
+}
+
+
+.our-friends__wrapper {
+   text-align: center;
+   padding-top: 78px;
+   padding-bottom: 100px;
+
+   h2 {
+      margin: 0 auto;
+      font-family: Georgia, sans-serif;
+      font-size: 35px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      max-width: 400px;
+      color: $color-dark-l;
+      margin-bottom: 60px;
+   }
+
+   button {
+      cursor: pointer;
+      background: $color-primary;
+      border-radius: 100px;
+      border: none;
+      padding: 15px 45px;
+      font-family: Georgia, sans-serif;
+      font-size: 17px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $color-dark-xl;
+      transition: .4s;
+
+      &:hover {
+         background: $color-primary-light;
+      }
+   }
+}
+
+.our-friends__pets {
+   display: flex;
+   justify-content: center;
+   gap: 90px;
+   margin-bottom: 66px;
+
+
+   div {
+      background: $color-light-s;
+      transition: .4s ease-in-out;
+
+      &:hover {
+         background: $color-light-xl;
+
+      }
+
+      p {
+         font-family: Georgia, sans-serif;
+         font-size: 20px;
+         letter-spacing: 0.06em;
+         color: $color-dark-l;
+         margin-top: 25px;
+         margin-bottom: 32px;
+
+      }
+   }
+
+
+   button {
+      cursor: pointer;
+      border: 2px solid $color-primary;
+      border-radius: 100px;
+      background: $color-light-s;
+      font-family: Georgia, sans-serif;
+      font-size: 17px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $color-dark-3xl;
+      padding: 14px 45px;
+      margin-bottom: 25px;
+      transition: .5s ease-in-out;
+
+      &:hover {
+         background: $color-primary-light;
+         border-color: $color-primary-light;
+      }
+   }
+}
+
+/*out-friends*/
+
+/*help*/
+
+.help__wrapper {
+   text-align: center;
+   padding-top: 50px;
+   padding-bottom: 85px;
+
+   h2 {
+      font-family: Georgia, sans-serif;
+      color: $color-dark-l;
+      font-size: 35px;
+      letter-spacing: 0.06em;
+      line-height: 130%;
+      margin-bottom: 60px;
+   }
+
+   .help__wrapper__icon {
+      display: flex;
+      justify-content: center;
+      gap: 120px;
+
+      p {
+         font-family: Georgia, sans-serif;
+         font-size: 20px;
+         line-height: 115%;
+         letter-spacing: 0.06em;
+         color: $color-dark-l;
+         margin-top: 25px;
+      }
+   }
+
+   .icon-top {
+      margin-bottom: 35px;
+   }
+}
+
+/*help*/
+
+/*in-adition*/
+
+.in-addition {
+   background: $color-light-l;
+}
+
+.in-addition__wrapper {
+   padding-top: 45px;
+   padding-bottom: 90px;
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+
+   .in-addition__wrapper__img {
+      padding-top: 40px;
+   }
+}
+
+.in-addition__wrapper__text {
+   max-width: 380px;
+
+   h2 {
+      font-family: Georgia, sans-serif;
+      color: $color-dark-l;
+      font-size: 35px;
+      letter-spacing: 0.06em;
+      line-height: 130%;
+      margin-bottom: 20px;
+   }
+
+   .in-addition__wrapper__text__bank {
+      font-family: Georgia, sans-serif;
+      font-size: 15px;
+      line-height: 110%;
+      letter-spacing: 0.06em;
+      color: $color-dark-l;
+      margin-bottom: 20px;
+   }
+
+
+
+   .in-addition__wrapper__button {
+      display: flex;
+      gap: 14px;
+      max-width: 349px;
+      background: $color-primary;
+      border-radius: 9px;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+
+      .in-addition__wrapper__text__card {
+         display: inline;
+         font-family: Georgia, sans-serif;
+         font-size: 20px;
+         line-height: 115%;
+         letter-spacing: 0.06em;
+         color: $color-dark-l;
+         margin: 0 auto;
+      }
+
+
+   }
+
+   .info {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-dark-m;
+   }
+}
+
+
+/*in-adition*/
+
+/*footer*/
+
+footer {
+   background-image: url(../../../assets/images/start-screen-gradient-background.png);
+   background-position: center;
+   background-size: cover;
+}
+
+.footer__wrapper {
+   padding-top: 25px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer__wrapper__text-left {
+   h2 {
+      font-family: Georgia, sans-serif;
+      font-size: 35px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $color-light-xl;
+      margin-bottom: 40px;
+   }
+
+   div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+
+   p {
+      margin: 0;
+      font-family: Georgia, sans-serif;
+      font-size: 20px;
+      line-height: 115%;
+      letter-spacing: 0.06em;
+
+   }
+
+   a {
+      text-decoration: none;
+      color: $color-primary
+   }
+}
+
+.footer__wrapper__text-left__email {
+   margin-bottom: 40px;
+}
+
+.footer__wrapper__text-right {
+   max-width: 302px;
+
+   h2 {
+      font-family: Georgia, sans-serif;
+      font-size: 35px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $color-light-xl;
+      margin-bottom: 40px;
+   }
+
+   div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+
+   p {
+      margin: 0;
+
+      a {
+         font-family: Georgia, sans-serif;
+         font-size: 20px;
+         line-height: 115%;
+         letter-spacing: 0.06em;
+         color: $color-primary
+      }
+   }
+}
+
+.footer__wrapper__text-left__address {
+   margin-bottom: 25px;
+}
+
+/*footer*/
