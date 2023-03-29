@@ -156,6 +156,7 @@ a {
 }
 .our-friends__wrapper__cards div:hover {
   background: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .our-friends__wrapper__cards div p {
   font-family: Georgia, sans-serif;
@@ -230,7 +231,7 @@ footer {
 }
 
 .footer__wrapper {
-  padding-top: 25px;
+  padding-top: 35px;
   display: flex;
   justify-content: space-between;
 }
@@ -241,12 +242,13 @@ footer {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #FFFFFF;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 .footer__wrapper__text-left div {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .footer__wrapper__text-left p {
   margin: 0;
@@ -273,12 +275,13 @@ footer {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #FFFFFF;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .footer__wrapper__text-right div {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .footer__wrapper__text-right p {
   margin: 0;
@@ -292,7 +295,7 @@ footer {
 }
 
 .footer__wrapper__text-left__address {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 /*footer*//*# sourceMappingURL=style.css.map */
