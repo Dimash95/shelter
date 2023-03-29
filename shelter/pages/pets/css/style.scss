@@ -193,6 +193,7 @@ a {
 
       &:hover {
          background: $color-light-xl;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
       }
 
@@ -287,7 +288,7 @@ footer {
 }
 
 .footer__wrapper {
-   padding-top: 25px;
+   padding-top: 35px;
    display: flex;
    justify-content: space-between;
 }
@@ -299,13 +300,14 @@ footer {
       line-height: 130%;
       letter-spacing: 0.06em;
       color: $color-light-xl;
+      margin-top: 20px;
       margin-bottom: 40px;
    }
 
    div {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
    }
 
    p {
@@ -336,13 +338,14 @@ footer {
       line-height: 130%;
       letter-spacing: 0.06em;
       color: $color-light-xl;
-      margin-bottom: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
    }
 
    div {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
    }
 
    p {
@@ -361,7 +364,7 @@ footer {
 }
 
 .footer__wrapper__text-left__address {
-   margin-bottom: 25px;
+   margin-bottom: 35px;
 }
 
 /*footer*/
