@@ -66,6 +66,7 @@ a {
   font-size: 13px;
   letter-spacing: 0.1em;
   align-items: center;
+  margin-top: 10px;
 }
 
 .header__nav {
@@ -101,6 +102,34 @@ a {
 }
 .header__nav .nav__list .nav__item .nav__item__our-pets {
   border-bottom: 2px solid #F1CDB3;
+}
+
+.header__burger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+}
+.header__burger .burger__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #FDDCC4;
+  position: absolute;
+  left: 0px;
+}
+
+.burger__line__first {
+  top: 0;
+}
+
+.burger__line__second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger__line__third {
+  bottom: 0;
 }
 
 /*header*/
@@ -298,4 +327,141 @@ footer {
   margin-bottom: 35px;
 }
 
-/*footer*//*# sourceMappingURL=style.css.map */
+/*footer*/
+@media screen and (max-width: 1220px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+  .header__wrapper {
+    padding-bottom: 0;
+  }
+  .our-friends__wrapper {
+    padding-top: 90px;
+    padding-bottom: 75px;
+  }
+  .our-friends__wrapper h1 {
+    margin-bottom: 30px;
+  }
+  .our-friends__wrapper .our-friends__wrapper__cards {
+    margin-bottom: 45px;
+  }
+  .our-friends__wrapper .our-friends__wrapper__cards .our-friends__pets {
+    gap: 40px;
+  }
+  .our-friends__wrapper .our-friends__wrapper__cards .scarlett,
+.our-friends__wrapper .our-friends__wrapper__cards .freddie {
+    display: none;
+  }
+  .footer__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding-top: 10px;
+  }
+  .footer__wrapper .footer__img {
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 0px 10px;
+  }
+  .header__wrapper {
+    padding-bottom: 10px;
+  }
+  .header__wrapper .header__logo {
+    padding-left: 10px;
+  }
+  .header__wrapper .header__nav {
+    display: none;
+  }
+  .header__wrapper .header__burger {
+    display: block;
+    color: #292929;
+    margin-top: 40px;
+    margin-right: 10px;
+  }
+  .header__wrapper .header__burger .burger__line {
+    background-color: #292929;
+  }
+  .our-friends__wrapper {
+    padding-top: 44px;
+    padding-bottom: 40px;
+  }
+  .our-friends__wrapper h1 {
+    max-width: 300px;
+    font-size: 25px;
+    line-height: 32.5px;
+    letter-spacing: 0.06em;
+    margin-bottom: 45px;
+  }
+  .our-friends__wrapper .our-friends__wrapper__cards {
+    margin-bottom: 50px;
+  }
+  .our-friends__wrapper .our-friends__wrapper__cards .sophia,
+.our-friends__wrapper .our-friends__wrapper__cards .timmy,
+.our-friends__wrapper .our-friends__wrapper__cards .charly {
+    display: none;
+  }
+  .our-friends__wrapper .our-friends__wrapper__number {
+    gap: 10px;
+  }
+  .our-friends__wrapper .our-friends__wrapper__number button {
+    height: 53px;
+    width: 53px;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 35px;
+    gap: 40px;
+  }
+  .footer__wrapper .footer__wrapper__text-left {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .footer__wrapper .footer__wrapper__text-left h2 {
+    font-size: 25px;
+    line-height: 32.5px;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+  }
+  .footer__wrapper .footer__wrapper__text-left div {
+    margin: 0 auto;
+    margin-top: 35px;
+    max-width: 250px;
+    gap: 20px;
+  }
+  .footer__wrapper .footer__wrapper__text-left .footer__wrapper__text-left__number {
+    margin-top: 42px;
+    gap: 26px;
+  }
+  .footer__wrapper .footer__wrapper__text-right {
+    margin: 0 auto;
+  }
+  .footer__wrapper .footer__wrapper__text-right h2 {
+    text-align: center;
+    align-items: flex-start;
+    max-width: 260px;
+    font-size: 25px;
+    line-height: 32.5px;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+  }
+  .footer__wrapper .footer__wrapper__text-right div {
+    margin: 0 auto;
+    margin-top: 35px;
+    max-width: 300px;
+    gap: 20px;
+  }
+  .footer__wrapper .footer__wrapper__text-right .footer__wrapper__text-left__address-second {
+    margin-top: 42px;
+    gap: 20px;
+  }
+  .footer__wrapper .footer__img {
+    margin-top: 0px;
+  }
+  .footer__wrapper .footer__img img {
+    max-width: 260px;
+  }
+}/*# sourceMappingURL=style.css.map */
