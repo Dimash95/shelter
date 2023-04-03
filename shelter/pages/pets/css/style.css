@@ -266,6 +266,7 @@ footer {
 }
 
 .footer__wrapper__text-left h2 {
+  max-width: 300px;
   font-family: Georgia, sans-serif;
   font-size: 35px;
   line-height: 130%;
