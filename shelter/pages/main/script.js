@@ -10,3 +10,28 @@ console.log('7. Ни на одном из разрешений до 320px вкл
 console.log('8. Верстка резиновая: при плавном изменении размера экрана от 1280px до 320px верстка подстраивается под этот размер, элементы верстки меняют свои размеры и расположение, не наезжают друг на друга, изображения могут менять размер, но сохраняют правильные пропорции: +8');
 console.log('9. При ширине экрана меньше 768px на обеих страницах меню в хедере скрывается, появляется иконка бургер-меню: +4');
 console.log('6. Верстка обеих страниц валидная: для проверки валидности вёрстки используйте сервис: +8');
+
+
+(function () {
+   const burgerItem = document.querySelector('.burger');
+   const menu = document.querySelector('.header__nav');
+   const menuCloseItem = document.querySelector('.header__nav-close');
+   const menuLinks = document.querySelectorAll('.header__link');
+
+   burgerItem.addEventListener('click', () => {
+      menu.classList.add('header__nav__active');
+
+   });
+   menuCloseItem.addEventListener('click', () => {
+      menu.classList.remove('header__nav__active');
+   })
+   if (window.innerWidth <= 768) {
+      for (let i = 0; i < menuLinks.length; i++) {
+         menuLinks[i].addEventListener('click', () => {
+            menu.classList.remove('header__nav__active');
+         });
+      }
+   }
+}());
+
+

@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/normalize.css">
+   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
    <link rel="stylesheet" href="css/style.css">
    <title>Shelter</title>
    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png">
@@ -27,15 +27,16 @@
             </div>
             <nav class="header__nav">
                <ul class="nav__list">
-                  <li class="nav__item"><a href="../main/index.html">About the shelter</a></li>
-                  <li class="nav__item"><a class="nav__item__our-pets" href="#our-friends">Our pets</a></li>
-                  <li class="nav__item"><a href="../main/index.html#help">Help the shelter</a></li>
-                  <li class="nav__item"><a href="#footer">Contacts</a></li>
+                  <li class="nav__item"><a class="header__link" href="../main/index.html">About the shelter</a></li>
+                  <li class="nav__item"><a class="header__link nav__item__our-pets" href="#our-friends">Our pets</a>
+                  </li>
+                  <li class="nav__item"><a class="header__link" href="../main/index.html#help">Help the shelter</a></li>
+                  <li class="nav__item"><a class="header__link" href="#footer">Contacts</a></li>
                </ul>
                <div class="header__nav-close">
-                  <span class="header__nav-close-line"></span>
-                  <span class="header__nav-close-line"></span>
-                  <span class="header__nav-close-line"></span>
+                  <span class="header__nav-close-line nav-close-line__first"></span>
+                  <span class="header__nav-close-line nav-close-line__second"></span>
+                  <span class="header__nav-close-line nav-close-line__third"></span>
                </div>
             </nav>
             <div class="header__burger burger">
@@ -139,6 +140,7 @@
          </div>
       </div>
    </footer>
+   <script src="script.js"></script>
 </body>
 
 </html>
