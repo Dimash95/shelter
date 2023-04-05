@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 /*header*/
 .header__wrapper {
   margin: 0 auto;
