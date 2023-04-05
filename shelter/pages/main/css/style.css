@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 /*header*/
 .container {
   background-image: url(../../../assets/images/start-screen-gradient-background.png);
