@@ -12,6 +12,9 @@ console.log('9. При ширине экрана меньше 768px на обе�
 console.log('6. Верстка обеих страниц валидная: для проверки валидности вёрстки используйте сервис: +8');
 
 
+// burger menu start
+
+
 (function () {
    const burgerItem = document.querySelector('.burger');
    const menu = document.querySelector('.header__nav');
@@ -35,3 +38,15 @@ console.log('6. Верстка обеих страниц валидная: дл�
 }());
 
 
+// burger menu finish
+
+
+
+// slider start
+
+const readFile = fs.readFileSync('pets.json', 'utf8');
+console.log(readFile);
+
+
+const pets = JSON.parse(readFile);
+console.log(pets);
