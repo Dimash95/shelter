@@ -1,4 +1,4 @@
-[
+ [
    {
       "name": "Katrine",
       "img": "../../assets/images/pets-katrine.png",
@@ -16,7 +16,7 @@
          "none"
       ]
    },
-   {
+    {
       "name": "Jennifer",
       "img": "../../assets/images/pets-jennifer.png",
       "type": "Dog",

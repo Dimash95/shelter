@@ -23,10 +23,17 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  font-weight: normal;
 }
 
 body {
   margin: 0 auto;
+}
+
+.stop-scroll {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
 }
 
 .wrapper {
@@ -36,6 +43,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
 }
 
 /*header*/
@@ -283,6 +294,9 @@ a {
   gap: 90px;
   margin-bottom: 78px;
 }
+.our-friends__pets .our-friends__pets__item {
+  cursor: pointer;
+}
 .our-friends__pets div {
   background: #FAFAFA;
   transition: 0.4s ease-in-out;
@@ -316,6 +330,102 @@ a {
 .our-friends__pets button:hover {
   background: #FDDCC4;
   border-color: #FDDCC4;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(41, 41, 41, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+}
+.popup.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.5s all;
+}
+.popup .popup__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #FAFAFA;
+  border-radius: 9px;
+  width: 900px;
+  height: 500px;
+  display: flex;
+  gap: 30px;
+  transition: 0.5s all;
+}
+.popup .popup__container.active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.5s all;
+}
+.popup .popup__container .popup__container__img .popup-img {
+  width: 500px;
+}
+.popup .popup__container .popup__container__text {
+  font-family: Georgia, sans-serif;
+  color: black;
+  text-align: start;
+  letter-spacing: 0.06em;
+  width: 350px;
+  margin-top: 50px;
+}
+.popup .popup__container .popup__container__text .close__popup {
+  font-size: 25px;
+}
+.popup .popup__container .popup__container__text .popup__container__text__name {
+  font-size: 35px;
+  line-height: 45.5px;
+  margin-bottom: 0px;
+}
+.popup .popup__container .popup__container__text .popup__container__text__type-breed {
+  font-size: 20px;
+  line-height: 23px;
+  color: black;
+  margin-top: 10px;
+}
+.popup .popup__container .popup__container__text .popup__container__text__description {
+  font-size: 15px;
+  line-height: 16.5px;
+  margin-top: 40px;
+}
+.popup .popup__container .popup__container__text .popup__container__text__ul {
+  margin-top: 38px;
+  padding-left: 14px;
+  line-height: 28px;
+}
+.popup .popup__container .popup__container__text .popup__container__text__ul li {
+  color: #FDDCC4;
+}
+.popup .popup__container .popup__container__text .popup__container__text__ul li .popup__span-bold {
+  font-weight: bold;
+  color: black;
+}
+.popup .popup__container .popup__container__text .popup__container__text__ul li .char {
+  color: black;
+}
+
+.close__popup {
+  position: absolute;
+  top: -50px;
+  right: -40px;
+  color: #292929;
+  background: none;
+  border: 2px solid #FDDCC4;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.close__popup:hover {
+  background: #FDDCC4;
 }
 
 /*out-friends*/
@@ -541,6 +651,31 @@ footer {
   .our-friends__wrapper .our-friends__pets .woody {
     display: none;
   }
+  .popup .popup__container {
+    width: 630px;
+    height: 350px;
+    gap: 10px;
+  }
+  .popup .popup__container .popup__container__text {
+    margin-top: 10px;
+    max-width: 260px;
+  }
+  .popup .popup__container .popup__container__text .popup__container__text__description {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 14.3px;
+  }
+  .popup .popup__container .popup__container__text .popup__container__text__ul {
+    margin-top: 10px;
+    line-height: 24px;
+  }
+  .popup .popup__container .popup__container__img .popup-img {
+    width: 350px;
+  }
+  .close__popup {
+    width: 50px;
+    height: 50px;
+  }
   .help__wrapper .help__wrapper__icon {
     justify-content: center;
     gap: 35px 60px;
@@ -713,6 +848,22 @@ footer {
   .our-friends__wrapper .our-friends__container .our-friends_icon-arrow {
     top: 438px;
     margin: 58px;
+  }
+  .popup .popup__container {
+    width: 240px;
+    height: 340px;
+  }
+  .popup .popup__container .popup-img {
+    display: none;
+  }
+  .popup .popup__container .popup__container__text__name {
+    text-align: center;
+  }
+  .popup .popup__container .popup__container__text__type-breed {
+    text-align: center;
+  }
+  .close__popup {
+    right: -30px;
   }
   .help__wrapper {
     padding-top: 40px;
