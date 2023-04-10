@@ -39,11 +39,18 @@ html {
 *::before,
 *::after {
    box-sizing: inherit;
+   font-weight: normal;
 }
 
 body {
    margin: 0 auto;
 }
+.stop-scroll{
+   width: 100vw;
+   height: 100vh;
+   overflow: auto;
+}
+
 
 .wrapper {
    max-width: 1200px;
@@ -54,9 +61,6 @@ a {
    text-decoration: none;
 }
 
-img {
-   vertical-align: bottom;
-}
 /*header*/
 
 .container {
@@ -342,6 +346,9 @@ img {
    gap: 90px;
    margin-bottom: 78px;
 
+   .our-friends__pets__item {
+      cursor: pointer;
+   }
 
    div {
       background: $color-light-s;
@@ -386,6 +393,128 @@ img {
       }
    }
 }
+
+//////////////////////////////////////////////////////       POPUP START
+
+.popup {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: rgba(41, 41, 41, 0.6);
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.5s all;
+
+   &.active {
+      opacity: 1;
+      pointer-events: all;
+      transition: 0.5s all;
+
+   }
+
+   .popup__container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: $color-light-s;
+      border-radius: 9px;
+      width: 900px;
+      height: 500px;
+      display: flex;
+      gap: 30px;
+      transition: 0.5s all;
+
+      &.active {
+         transform: translate(-50%, -50%) scale(1);
+         transition: 0.5s all;
+      }
+
+      .popup__container__img {
+         .popup-img {
+            width: 500px;
+         }
+      }
+
+      .popup__container__text {
+         font-family: Georgia, sans-serif;
+         color: black;
+         text-align: start;
+         letter-spacing: 0.06em;
+         width: 350px;
+         margin-top: 50px;
+
+         .close__popup {
+            font-size: 25px;
+         }
+
+         .popup__container__text__name {
+            font-size: 35px;
+            line-height: 45.5px;
+            margin-bottom: 0px;
+         }
+
+         .popup__container__text__type-breed {
+            font-size: 20px;
+            line-height: 23px;
+            color: black;
+            margin-top: 10px;
+         }
+
+         .popup__container__text__description {
+            font-size: 15px;
+            line-height: 16.5px;
+
+            margin-top: 40px;
+         }
+
+         .popup__container__text__ul {
+            margin-top: 38px;
+            padding-left: 14px;
+            line-height: 28px;
+
+            li {
+               color: $color-primary-light;
+
+               .popup__span-bold {
+                  font-weight: bold;
+                  color: black;
+               }
+
+               .char {
+                  color: black;
+               }
+            }
+
+
+         }
+      }
+   }
+}
+
+.close__popup {
+   position: absolute;
+   top: -50px;
+   right: -40px;
+   color: #292929;
+   background: none;
+
+   border: 2px solid $color-primary-light;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   cursor: pointer;
+   transition: 0.5s all;
+
+   &:hover {
+      background: $color-primary-light;
+   }
+}
+
+//////////////////////////////////////////////////////       POPUP END
+
 
 /*out-friends*/
 
@@ -661,6 +790,45 @@ footer {
    }
 
 
+   .popup {
+      .popup__container {
+         width: 630px;
+         height: 350px;
+         gap: 10px;
+
+         .popup__container__text {
+            margin-top: 10px;
+            max-width: 260px;
+
+            .popup__container__text__description {
+               margin-top: 10px;
+               font-size: 13px;
+               line-height: 14.3px;
+            }
+
+            .popup__container__text__ul {
+               margin-top: 10px;
+               line-height: 24px;
+            }
+         }
+
+         .popup__container__img {
+            .popup-img {
+               width: 350px;
+            }
+         }
+      }
+   }
+
+   .close__popup {
+      width: 50px;
+      height: 50px;
+
+   }
+
+
+
+
    .help__wrapper {
       .help__wrapper__icon {
          justify-content: center;
@@ -716,13 +884,81 @@ footer {
       }
 
       .header__nav {
-         display: none;
+         position: fixed;
+         display: block;
+         max-width: 767px;
+         width: 100%;
+         text-align: center;
+         line-height: 50px;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background-color: $color-dark-3xl;
+         z-index: 10;
+         padding-top: 20px;
+         transform: translateX(100%);
+         transition: .2s all linear;
+
+
+         .nav__list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+
+            margin-top: 190px;
+
+            .header__link {
+               font-size: 32px;
+               line-height: 51.2px;
+               color: $color-light-s;
+            }
+         }
+
+         .header__nav-close {
+            width: 30px;
+            height: 20px;
+            max-height: 100%;
+            position: absolute;
+            top: 60px;
+            right: 30px;
+            z-index: 11;
+
+            .nav-close-line__first {
+               left: 0;
+            }
+
+            .nav-close-line__second {
+               left: 30%;
+               transform: translateY(-50%);
+            }
+
+            .nav-close-line__third {
+               left: 60%;
+            }
+
+            .header__nav-close-line {
+               display: block;
+               width: 100%;
+               height: 2px;
+               background-color: $color-primary-light;
+               position: absolute;
+               transform: rotate(90deg);
+            }
+         }
+
+
+
+
       }
 
       .header__burger {
          display: block;
          margin-top: 50px;
          margin-right: 10px;
+      }
+
+      .header__nav__active {
+         transform: translateX(0);
       }
    }
 
@@ -748,7 +984,7 @@ footer {
             text-align: center;
          }
 
-         .not-only__img {}
+         
       }
 
       .not-only__img {
@@ -826,6 +1062,29 @@ footer {
             margin: 58px
          }
       }
+   }
+
+   .popup {
+      .popup__container {
+         width: 240px;
+         height: 340px;
+
+         .popup-img {
+            display: none;
+         }
+
+         .popup__container__text__name {
+            text-align: center;
+         }
+
+         .popup__container__text__type-breed {
+            text-align: center;
+         }
+      }
+   }
+
+   .close__popup {
+      right: -30px;
    }
 
 
